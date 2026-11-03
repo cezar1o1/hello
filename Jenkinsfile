@@ -2,9 +2,11 @@ pipeline {
   agent any
 
   environment {
+	PATH = "C:\\Users\\cezar\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin;${env.PATH}"
     DOCKERHUB_REPO = 'cezar1o1/hello' 
     IMAGE_TAG      =  new Date().format('yyyyMMdd-HHmm')
     DOCKERHUB_CRED = 'dockerhub-creds'
+    
 
     EC2_HOST       = 'ec2-13-58-128-228.us-east-2.compute.amazonaws.com'
     EC2_USER       = 'hcezar'
