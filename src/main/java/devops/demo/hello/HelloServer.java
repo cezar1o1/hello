@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets;
 
 public class HelloServer {
   public static void main(String[] args) throws Exception {
-    int port = Integer.parseInt(System.getenv().getOrDefault("SERVER_PORT", "8080"));
+    int port = Integer.parseInt(System.getenv().getOrDefault("SERVER_PORT", "8081"));
     HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
     server.createContext("/", new HelloHandler());
     server.setExecutor(null);
@@ -51,10 +51,10 @@ public class HelloServer {
       		+ "<body>\r\n"
       		+ "    <h1>Hello, DevOps!</h1>\r\n"
       		+ "    <p>Welcome to our first DevOps demo application.</p>\r\n"
-      		+ "    <p>This page is generated to verify the build and deployment pipeline.</p>\r\n"
+      		+ "    <p>My First CI/CD pipeline has been successfully cuilt and deployed. It works!</p>\r\n"
       		+ "    \r\n"
       		+ "    <div class=\"footer\">\r\n"
-      		+ "        © DevOps Demo | Computer Science - Bo Guo\r\n"
+      		+ "        © DevOps Demo | Computer Science - Cezar Herrera\r\n"
       		+ "    </div>\r\n"
       		+ "</body>\r\n"
       		+ "</html>";
